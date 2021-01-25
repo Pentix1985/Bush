@@ -7,10 +7,17 @@ body {
     color: blue;
     font-size: 20px;
     font-style: italic;
+    max-width: 130px;
+    display: inline-block;
 }
 
-.menu a {
+.menu li a {
     text-decoration: none;
+}
+
+.menu li a:hover {
+    color: wheat;
+    background-color: #484343;
 }
 
 .short__desc,
@@ -31,6 +38,14 @@ body {
     line-height: 16px;
 }
 
+.short__text::first-letter,
+.full__text::first-letter {
+    text-transform: uppercase;
+    font-size: 40px;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .full__text {
     color: #484343;
     font-weight: 400;
@@ -46,14 +61,47 @@ body {
     list-style-image: radial-gradient(circle farthest-side at 50% 50%, darkblue, transparent);
 }
 
+form ul li {
+    list-style-type: none;
+}
+
 form li input {
     height: 20px;
     width: 230px;
     color: #484343;
     font-size: 12px;
     font-weight: 200;
+    text-transform: capitalize;
+}
+
+form li input[type="email"]:focus {
+    color: green;
+    background-color: silver;
 }
 
 .img__rew {
     outline: 3px solid green;
+}
+
+.img__rew:hover {
+    outline: 3px;
+}
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    min-width: 20px;
+    height: 20px;
+    border: 2px solid black;
+}
+
+.task tr:first-child {
+    height: 50px;
+}
+
+.footer {
+    text-align: center;
 }
