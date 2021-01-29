@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PracticalTask</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        do {
+            let minNum = parseInt(prompt("Введите минимальное число:"));
+            let maxNum = parseInt(prompt("Введите максимальное число:"));
+
+            if(minNum > maxNum) {
+                alert("Минимальное число должно быть меньше максимального!");
+            } else if (isNaN(minNum) || isNaN(maxNum)) {
+                alert("Введите числа!");
+            } else {
+                let randomNum = parseInt(Math.random() * (maxNum - minNum) + minNum);
+                let tryCount = 1;
+                
+                do {
+                    let userAnswer = prompt("Угадайте число или введите \"q\" чтобы выйти:");
+
+                    if(userAnswer === "q") {
+                        break;
+                    } else {
+                        userAnswer = parseInt(userAnswer);
+                        if(userAnswer === randomNum) {
+                            alert(`Вы угадали! Правильное число ${randomNum}. Количество попыток: ${tryCount}`);
+                            break;
+                        } else if (userAnswer > randomNum) {
+                            alert(`Слишком большое число!`);
+                            tryCount++;
+                        } else if (userAnswer < randomNum) {
+                            alert(`Слишком маленькое число!`);
+                            tryCount++;
+                        } else if (isNaN(userAnswer)) {
+                            alert(`Вы ввели не число!`);
+                        } 
+                    }
+                } while (true);
+            }
+        } while(confirm("Сырать ещё раз?"));
+
+        
+    </script>
+</body>
+</html>
