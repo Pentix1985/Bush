@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4HW</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        // 4. Реализовать основные 4 арифметические операции (+, -, /, *) в виде функций с двумя параметрами. Т.е. например, функция для сложения должна принимать два числа, складывать их и возвращать результат.
+        // Обязательно использовать оператор return.
+
+        function additionNum(a,b) {
+            return a + b;
+        }
+
+        function multiplicationNum(a,b) {
+            return a * b;
+        }
+
+        function subtractionNum(a,b) {
+            return a - b;
+        }
+
+        function divisionNum(a,b) {
+            if (b != 0) {
+                return a / b;
+            } else {
+                return "На ноль делить нельзя!";
+            }
+        }
+
+        let a = parseInt(prompt('Введите число №1:'));
+        let b = parseInt(prompt('введите число №2:'));
+
+        alert(`Сумма: ${additionNum(a,b)}`);
+        alert(`Произведение: ${multiplicationNum(a,b)}`);
+        alert(`Разность: ${subtractionNum(a,b)}`);
+        alert(`Частное: ${divisionNum(a,b)}`);
+    </script>
+</body>
+</html>

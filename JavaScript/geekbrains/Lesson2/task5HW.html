@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task5HW</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        // 5. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+        // где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+        // переданного значения операции (использовать switch) выполнить одну из арифметических операций
+        // (использовать функции из задания 4) и вернуть полученное значение.
+
+        function additionNum(a,b) {
+            return a + b;
+        }
+
+        function multiplicationNum(a,b) {
+            return a * b;
+        }
+
+        function subtractionNum(a,b) {
+            return a - b;
+        }
+
+        function divisionNum(a,b) {
+            if (b != 0) {
+                return a / b;
+            } else {
+                return "На ноль делить нельзя!";
+            }
+        }
+
+        function mathOperation(arg1, arg2, operation) {
+            switch(operation) {
+                case "+":
+                    return additionNum(arg1, arg2);
+                case "*":
+                    return multiplicationNum(arg1, arg2);
+                case "-": 
+                    return subtractionNum(arg1,arg2);
+                case "/":
+                    return divisionNum(arg1, arg2);
+            }
+        }
+
+        let a = parseInt(prompt("Введите число №1"));
+        let b = parseInt(prompt("Введите число №2"));
+        let operation = prompt(`Выбирете одну из операций "+" - сложение, "*" - умножение, "-" - вычитание, "/" - деление`);
+
+        alert(mathOperation(a, b, operation));
+    </script>
+</body>
+</html>
