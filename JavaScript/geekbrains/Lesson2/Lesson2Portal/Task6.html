@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task6</title>
+</head>
+<body>
+    <!-- 6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 3) и вернуть полученное значение (использовать switch). -->
+
+    <script>
+        'use strict';
+
+        let a = +prompt(`Введите число №1`);
+        let b = +prompt(`Введите число №2`);
+        let op = prompt(`Выбирите операцию "+" - сложение, "-" вычитание, "/" - деление, "*" - умножение`);
+
+        function mathOperation(arg1, arg2, operation) {
+            switch(operation) {
+                case "+":
+                    return addition(arg1,arg2);
+                case "-":
+                    return subtraction(arg1,arg2);
+                case "/":
+                    return division(arg1,arg2);
+                case "*":
+                    return multiplication(arg1,arg2);
+            }
+        }
+
+        function addition(a,b) {
+            return a + b;
+        }
+
+        function subtraction(a,b) {
+            return a - b;
+        }
+
+        function division(a,b) {
+            if (b != 0) {
+                return a / b;
+            }
+        }
+
+        function multiplication(a,b) {
+            return a * b;
+        }
+
+        console.log(mathOperation(a,b,op));
+
+    </script>
+</body>
+</html>
