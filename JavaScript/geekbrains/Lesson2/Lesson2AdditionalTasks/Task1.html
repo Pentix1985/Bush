@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+<body>
+    <!-- Создать рекрсивную функцию для чисел Фибоначи с указанием максимального количества шагов.
+
+    0,1,1,2,3,5,8,13,21,34,55,89 и т.для -->
+
+    <script>
+        'use strict';
+
+        function fib(n) {
+            if(n <= 1) {
+                return n;
+            } else {
+                return fib(n-1) + fib(n-2);
+            }  
+        }
+
+        alert(fib(7));
+
+        // function fib(n1 = 0, n2 = 1, steps = 7) {
+        //     if(steps == 0) {
+        //         return 2;
+        //     } else {
+        //         let n3 = n1 + n2;
+
+        //         return  n3 + fib(n1 = n2, n2 = n3, --steps);
+        //     }
+        // }
+
+        // console.log(fib());
+    </script>
+</body>
+</html>

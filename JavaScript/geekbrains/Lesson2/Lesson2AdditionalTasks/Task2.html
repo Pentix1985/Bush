@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+</head>
+<body>
+    <!-- 2. Игра угадай число в виде рекурсии. -->
+
+    <script>
+        'use strict';
+
+        function getRandomNumber(min,max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function game(number) {
+            let answer = +prompt(`Угадайте число в диапазоне от ${minNumber} до ${maxNumber}`);
+            if(answer == number) {
+                alert(`Вы угадали! Правильное число ${number}`);
+                return;
+            } else if(answer > number) {
+                alert(`Слишком большое число!`);
+            } else if(answer < number) {
+                alert(`Слишком маленькое число!`);
+            }
+            return game();
+        }
+
+        let minNumber = +prompt(`Введите минимальное число`);
+        let maxNumber = +prompt(`введите максимальное число`);
+        let number = getRandomNumber(minNumber,maxNumber);
+
+        game(number);
+
+        
+    </script>
+</body>
+</html>
