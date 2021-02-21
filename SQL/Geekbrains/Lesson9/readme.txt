@@ -84,5 +84,22 @@ UPDATE shop.category SET aliasname = 'Women''s shoes' WHERE id = 4;
 UPDATE shop.category SET name = 'Головные уборы' WHERE id = 5;
 UPDATE shop.category SET aliasname = 'Headwear' WHERE id = 5;
 insert into shop.brend (brend_name) values ('Тетя Клава Company');
-delete from shop.brend where id in (4);
+DELETE from shop.brend where id in (4);
+
+Задание к уроку №9 по БД.
+
+CREATE TABLE `shop`.`product` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `id_brend` INT NOT NULL,
+  `id_category` INT NOT NULL,
+  `id_product_type` INT NOT NULL,
+  `price` DECIMAL(10,2) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_bin;
+
+RENAME TABLE product TO products;
+
+
 
