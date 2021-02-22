@@ -151,8 +151,26 @@ ON DELETE CASCADE
 ON UPDATE NO ACTION;
 
 Задание к уроку №11 по БД.
+Создать две таблицы order и order_products
 
+CREATE TABLE `order` (
+id INT NOT NULL AUTO_INCREMENT,
+user_name VARCHAR(128) NOT NULL,
+phone VARCHAR(128) NOT NULL,
+datetime DATETIME,
+PRIMARY KEY (id));
 
+CREATE TABLE `order_products` (
+order_id INT NOT NULL,
+product_id INT,
+count INT,
+PRIMARY KEY order_id;
+
+ALTER TABLE order
+CHANGE COLUMN datetime 
+datetime DATETIME NOT NULL;
+
+INSERT `order` (user_name, phone, datetime) VALUES (Vasa, 55-55-55, 2021-05-09);
 
 
 
