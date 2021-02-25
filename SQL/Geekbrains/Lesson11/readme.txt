@@ -172,5 +172,26 @@ datetime DATETIME NOT NULL;
 
 INSERT `order` (user_name, phone, datetime) VALUES (Vasa, 55-55-55, 2021-05-09);
 
+Задание к уроку №12 по БД.
+
+ALTER TABLE `order_products`
+CHANGE COLUMN `product_id` `product_id` INT NOT NULL;
+
+ALTER TABLE `order_products`
+CHANGE COLUMN `count` `count` INT NOT NULL;
+
+ALTER TABLE `order_products`;
+ADD CONSTRAINT `fk_order_products_order`
+FOREIGN KEY (`order_id`)
+REFERENCES `order` (id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+ALTER TABLE `order_products`;
+ADD CONSTRAINT `fk_order_products_products`
+FOREIGN KEY (`product_id`)
+REFERENCES `products` (id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
 
 
