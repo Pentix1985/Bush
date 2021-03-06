@@ -101,5 +101,56 @@ COLLATE = utf8_bin;
 
 RENAME TABLE product TO products;
 
+Задание к уроку №10 по БД.
+
+INSERT products (id_brend, id_category, id_product_type, price) VALUES (10, 3, 3, 600);
+(вставили в products товар с идентификатором которого нет в таблице brend);
+
+ALTER TABLE products
+ADD CONSTRAINT fk_brend_products
+FOREIGN KEY (id_brend)
+REFERENCES brend (id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+Error! Ошибка т.к. в таблице products присутствует товар с идентификаторм 10 в столбце id_brend
+
+INSERT brend (id, brend_name) VALUES (10, 'Klava company');
+Создали внешний ключ.
+
+Попытаемся удалить из бренда товар с идентификатором 10.
+DELETE FROM brend WHERE id in (10);
+Error! Не задал тип удаления.
+
+ALTER TABLE products
+DROP FOREIGN KEY fk_brend_products;
+
+ALETR TABLE products
+ADD CONSTRAINT fk_brend_products
+FOREIGN KEY (id_brend)
+REFERENCES brend (id)
+ON DELETE CASCADE
+ON UPDATE NO ACTION;
+
+DELETE FROM brend WHERE id in (10);
+
+Добавляем внешние ключи для оставшихся таблиц.
+
+ALTER TABLE products
+ADD CONSTRAINT fk_category_products
+FOREIGN KEY id_category
+REFERENCES category (id)
+ON DELETE CASCADE
+ON UPDATE NO ACTION;
+
+ALTER TABLE products
+ADD CONSTRAINT fk_product_type_products
+FOREIGN KEY id_product_type
+REFERENCES product_type (id)
+ON DELETE CASCADE
+ON UPDATE NO ACTION;
+
+
+
 
 
