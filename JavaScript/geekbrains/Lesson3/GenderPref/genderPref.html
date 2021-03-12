@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenderPref</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        /*
+          В массиве пользователей добавить Mr. или Mrs. в зависимости от пола
+          Пример
+
+          Было:
+          {
+              surname: 'Campbell',
+              gender: 'male',
+          }
+
+          Стало:
+          {
+              surname: 'Campbell',
+              gender: 'male',
+              appeal: Mr.,
+          }
+        */
+
+        const users = [
+            {
+              surname: 'Campbell',
+              gender: 'male',
+            },
+            {
+              surname: 'Blythe',
+              gender: 'female',
+            }, 
+            {
+              surname: 'Morton',
+              gender: 'male',
+            },
+            {
+              surname: 'Adler',
+              gender: 'female',
+            },
+        ];
+
+        const usersAppeal = users.map(user => {
+            if(user.gender === 'male') {
+                user.appeal = 'Mr.';
+                return user;
+            } 
+
+            user.appeal = 'Mrs.';
+            return user;
+        });
+
+        console.log(users);
+        console.log(usersAppeal);
+    </script>
+</body>
+</html>
