@@ -46,19 +46,29 @@
               gender: 'female',
             },
         ];
+        
+        // У данного решения есть недостаток, переопределяется первоночальный массив
+        // const usersAppeal = users.map(user => {
+        //     if(user.gender === 'male') {
+        //         user.appeal = 'Mr.';
+        //         return user;
+        //     } 
 
-        const usersAppeal = users.map(user => {
+        //     user.appeal = 'Mrs.';
+        //     return user;
+        // });
+
+        const userAppealTeacher = users.map(user => {
             if(user.gender === 'male') {
-                user.appeal = 'Mr.';
-                return user;
-            } 
+              return Object.assign({}, user, {appeal: 'Mr.'});
+            }
 
-            user.appeal = 'Mrs.';
-            return user;
+            return Object.assign({}, user, {appeal: 'Mrs'});
         });
 
         console.log(users);
-        console.log(usersAppeal);
+        // console.log(usersAppeal);
+        console.log(userAppealTeacher);
     </script>
 </body>
 </html>
