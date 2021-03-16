@@ -6,10 +6,21 @@
 
 function translit($str, $transChars) {
     $strArr = mb_str_split($str);
-    foreach($strArr as $char) {
-        if(array_key_exists($char, $transChars))
-            echo $char;
-    }
+        for($i = 0; $i < count($strArr); $i++) {
+            foreach($transChars as $ruChar => $enChar) {
+                if ($strArr[$i] === $ruChar) {
+                    $strArr[$i] = $enChar;
+                }
+            }
+        }
+
+    return implode($strArr);
+}
+
+function translit0($str, $transChars) {
+    
+    return strtr($str, $transChars);
+    
 }
 
 $transChars = [
@@ -38,5 +49,6 @@ $transChars = [
     'Э' => 'E',   'Ю' => 'Yu',  'Я' => 'Ya',
 ];
 
-translit("Привет мир!", $transChars);
+echo translit("Привет мир!", $transChars) . "<br>";
+echo translit0("Привет мир!", $transChars);
 ?>
