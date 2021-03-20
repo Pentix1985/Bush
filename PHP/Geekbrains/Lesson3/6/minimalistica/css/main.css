@@ -1,28 +1,34 @@
 *{margin:0;padding:0;}
-
 body { font: .8em Georgia, "Times New Roman", Serif; background: #fff; color: #777; }
-
-a { color: #D40000; text-decoration: 
-	none; }
+a { color: #D40000; text-decoration: none; }
 	a:hover { color: #8F0000; }
-
 p { line-height: 1.7em; margin: 0 0 15px; }
-
 .x { clear: both; }
 
 h1 { float: left; font-size: 2em; font-weight: normal; font-style: italic; padding: 0 0 25px 10px; margin: 0 0 10px; }
-
 h2 { font-weight: normal; font-size: 2.6em; padding: 0 0 10px; margin: 0 0 15px; }
-
 h3 { font-size: 1.7em; font-weight: normal; margin: 0 0 20px; }
 	h3 a { color: #222; }
 	
 #content { width: 960px; margin: 40px auto; }
 
 .menu { float: right; margin: 10px 10px 0 0; }
-	.menu li { display: inline-block; list-style: none; position: relative; }
-	.menu li a { float: left; margin: 0 0 0 20px; color: #888; }
-		.menu li a:hover { color: #555; }
+.menu > li { display: inline-block; list-style: none; position: relative;}
+.menu li a { float: left; margin: 0 0 0 20px; color: #888; }
+.menu li a:hover { color: #555; }
+.menu li:hover #submenu { display: block; }
+
+#submenu {
+	display: none;
+	width: 100px;
+	position: absolute;
+	top: 15px;
+	background-color: darkblue;
+}
+
+#submenu li {
+	list-style-type: none;
+}
 
 .post { clear: both; padding: 30px 10px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin: 0 0 40px; }
 	.post .details { float: left; width: 250px; }
@@ -34,18 +40,3 @@ h3 { font-size: 1.7em; font-weight: normal; margin: 0 0 20px; }
 	.col.last { margin-right: 0; }
 		
 #footer { clear: both; border-top: 1px solid #ddd; padding: 20px 0; font-size: .9em; color: #999; }
-
-.submenu {
-	display: none;
-	position: absolute;
-	width: 100px;
-	top: 15px;
-	background-color: red;
-}
-
-.menu li:hover .submenu {
-	display: block;}
-
-.submenu a:hover {
-	background-color: #fff;
-}

@@ -77,4 +77,3 @@ function translit0($str) {
 
 echo translit0("Привет мир!"). "<br>";
 echo translit("Привет мир!");
-?>

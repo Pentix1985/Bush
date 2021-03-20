@@ -19,4 +19,3 @@
     
 
     onlyK($regionAndCitys);
-?>
