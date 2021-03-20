@@ -33,7 +33,7 @@
 			$menu .= "</ul>";
 			$menu .= "</li>";
 		} else {
-			$menu .= "<li><a href\"#\">$subMenu</a></li>";
+			$menu .= "<li><a href=\"#\">$subMenu</a></li>";
 		}
 	}
 
