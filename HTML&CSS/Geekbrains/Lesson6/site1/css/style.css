@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 
+/* top */
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -66,10 +67,10 @@ body {
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #43a047;
 }
 
 .top__text {
+    color: #43a047;
     margin: 283px 0 0 0;
 }
 
@@ -138,4 +139,217 @@ body {
     background-color: #212121;
     border-radius: 50%;
     margin: 0 0 0 0;
+}
+
+/* featured */
+
+.featured {
+    padding: 120px 98px;
+}
+
+.featured__top {
+    width: 100%;
+    display: inline-block;
+}
+
+.explore-link {
+    float: right;
+}
+
+.featured__nav {
+    width: 303px;
+    float: left;
+}
+
+.featured__nav_item {
+    display: inline-block;
+}
+
+.featured__nav-link {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #6c6c6c;
+    border-bottom: 1px solid #6c6c6c;
+}
+
+li.featured__nav_item:nth-child(1) > a:nth-child(1) {
+    padding: 0px 17px 13px 5px;
+}
+
+li.featured__nav_item:nth-child(2) > a:nth-child(1) {
+    padding: 0px 20px 13px 5px;
+}
+
+.featured__nav-link:hover {
+    border-bottom: 3px solid #212121;
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #212121;
+}
+
+.explore-link {
+    margin-top: 12px;
+    width: 190px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #212121;
+}
+
+.explore-link:hover {
+    background: #ffffff url(../img/img_home/arrow.svg) no-repeat 177px 5px;
+}
+
+.featured__content {
+    margin: 60px 0 0 0;
+    display: inline-block;
+}
+
+.item {
+    width: 270px;
+    height: 270px;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.item:hover .featured__content-item_hover {
+    visibility: visible;
+}
+
+.featured__content-item_hover {
+    background-color: #ffffff;
+    opacity: 0.9;
+    text-align: center;
+    padding: 0 28px;
+    height: 100%;
+    visibility: hidden;
+    border: 1px solid #9c9c9c;
+}
+
+.featured__content-item_hover a {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0px 2px 5px 0px rgba(33,33,33,0.34);
+    border-radius: 24px;
+    background: #ffffff url(../img/img_home/arrow.svg) no-repeat 19px 13px;
+    background-size: 12px 20px;
+    margin: 62px 0 10px 0;
+}
+
+.featured__content-item_hover h3 {
+    font-size: 22px;
+    line-height: 29px;
+    font-weight: 700;
+    color: #212121;
+}
+
+.featured__content-item_hover p {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 300;
+    color: #6c6c6c;
+    margin: 13px 0 0 0;
+}
+
+.featured__content-item-1 {
+    background-image: url(../img/img_home/product-1.jpg);
+    background-repeat: no-repeat;
+}
+
+.featured__content-item-2 {
+    background-image: url(../img/img_home/product-2.jpg);
+    background-repeat: no-repeat;
+}
+
+.featured__content-item-3 {
+    background-image: url(../img/img_home/product-3.jpg);
+    background-repeat: no-repeat;
+}
+
+.featured__content-item-4 {
+    background-image: url(../img/img_home/product-4.jpg);
+    background-repeat: no-repeat;
+    margin-right: 0px;
+}
+
+/* exclusive */
+
+.exclusive {
+    display: inline-block;
+}
+
+.exclusive__text-h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #212121;
+    margin-bottom: 10px;
+}
+
+.exclusive__text-content {
+    font-size: 14.1px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #6c6c6c;
+    margin-bottom: 25px;
+}
+
+.exclusive1 {
+    width: 680px;
+    height: 683px;
+    background-image: url(../img/img_home/promo-img1.jpg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding: 225px 0 0 50px;
+}
+
+.exclusive1__text {
+    max-width: 385px;
+}
+
+.exclusive1__text-pheading {
+    letter-spacing: 0.1em;
+    color: #1e88e5;
+    margin-bottom: 5px;
+}
+
+.exclusive2 {
+    width: 680px;
+    height: 683px;
+    background-image: url(../img/img_home/promo-img.jpg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding: 225px 0 0 50px;
+}
+
+.exclusive2__text {
+    max-width: 385px;
+}
+
+.exclusive2__text-pheading {
+    letter-spacing: 0.1em;
+    color: #1e88e5;
+}
+
+/* trending-products */
+
+.trending-products {
+    padding: 115px 98px 120px 98px;
+}
+
+.trending-products__head {
+
+}
+
+.trending-products__head-h2 {
+    float: left;
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #212121;
 }
