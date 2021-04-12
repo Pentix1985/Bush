@@ -267,8 +267,8 @@
 }
 
 .roll-in-left {
-  -webkit-animation: roll-in-left .6s ease-out both;
-          animation: roll-in-left .6s ease-out both;
+  -webkit-animation: roll-in-left .8s ease-out both;
+          animation: roll-in-left .8s ease-out both;
 }
 
 .flicker-in-1 {
