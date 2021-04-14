@@ -390,7 +390,107 @@ div.trending-products__items > img:nth-child(6) {
     color: #e53935;
 }
 
+/* exclusive-trending-products */
+
 .exclusive-trending-products {
-    min-height: 800px;
+    min-height: 810px;
     padding: 120px 98px;
+}
+
+.exclusive-trending-products__exclusive {
+    background-image: url("../img/img_home/product-1-lg.jpg");
+    background-repeat: no-repeat;
+    width: 570px;
+    height: 570px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.exclusive-trending-products__trending-products {
+    display: inline-block;
+    height: 570px;
+    width: 600px;
+    padding: 0 0 0 30px;
+}
+
+.exclusive-trending-products__trending-products img {
+    width: 270px;
+    height: 270px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.exclusive-trending-products__trending-products > img:nth-child(3),
+.exclusive-trending-products__trending-products > img:nth-child(4) {
+    margin-top: 30px;
+}
+
+.exclusive-trending-products__trending-products > img:nth-child(1),
+.exclusive-trending-products__trending-products > img:nth-child(3) {
+    margin-right: 30px;
+}
+
+.exclusive__text {
+    padding-left: 30px;
+    padding-top: 185px;
+    max-width: 385px;
+}
+
+.exclusive__text-pheading {
+    letter-spacing: 0.1em;
+    color: #1e88e5;
+    margin-bottom: 5px;
+}
+
+/* mobile-app */
+
+.mobile-app {
+    min-height: 516px;
+    background-image: url("../img/img_home/back-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 125px 0 120px 98px;
+}
+
+.mobile-app__content {
+    max-width: 472px;
+}
+
+.mobile-app__p-title {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #6c6c6c;
+}
+
+.mobile-app__h2-title {
+    font-size: 62px;
+    line-height: 72px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #212121;
+    margin-bottom: 10px;
+}   
+
+.mobile-app__p-text {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #6c6c6c;
+    margin-bottom: 30px;
+}
+
+.google {
+    margin-left: 10px;
+}
+
+/* footer */
+
+.footer {
+    min-height: 384px;
+    background-color: #f7f7f7;
+    padding: 120px 97px 30px 98px
 }
