@@ -494,3 +494,137 @@ div.trending-products__items > img:nth-child(6) {
     background-color: #f7f7f7;
     padding: 120px 97px 30px 98px
 }
+
+.footer__top {
+    display: block;
+    margin-bottom: 59px;
+}
+
+.footer__top-elem {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.contact-us {
+    max-width: 225px;
+    margin-right: 78px;
+}
+
+.useful-information {
+    max-width: 434px;
+    margin-right: 75px;
+}
+
+.stay-in-touch {
+    max-width: 373px;
+}
+
+.footer__h6 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #6c6c6c;
+    margin-bottom: 24px;
+}
+
+.contact-us p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    color: #212121;
+}
+
+.contact-us__p-top {
+    margin-bottom: 22px;
+}
+
+.useful-information__p {
+    display: inline-block;
+}
+
+.useful-information__p1 {
+    margin-right: 90px;
+}
+
+.useful-information__p p {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #212121;
+}
+
+.stay-in-touch__p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    color: #212121;
+    margin-bottom: 22px;
+}
+
+.stay-in-touch input {
+    width: 370px;
+    height: 48px;
+    border: 1px solid #d9dee1;
+    padding: 17px 0 17px 19px;
+
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    color: #6c6c6c;
+    background-image: url("../img/img_home/fly.png");
+    background-repeat: no-repeat;
+    background-position-x: 330px;
+    background-position-y: center;
+}
+
+/* footer__low */
+
+.footer__low p {
+    display: inline-block;
+    vertical-align: center;
+    font-size: 12px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6c6c6c;
+}
+
+.social {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 164px;
+}
+
+.social__links {
+    display: inline-block;
+    vertical-align: top;
+    width: 28px;
+    height: 28px;
+    background-image: url("../img/img_home/social-links.png");
+    background-repeat: no-repeat;
+}
+
+.link-facebook {
+
+}
+
+.link-twitter {
+    background-position-x: -34px;
+}
+
+.link-g {
+    background-position-x: -68px;
+}
+
+.link-D {
+    background-position-x: -101px;
+}
+
+.footer__low > p:nth-child(1) {
+    margin-right: 138px;
+}
