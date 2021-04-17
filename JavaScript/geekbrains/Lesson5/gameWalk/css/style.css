@@ -1,0 +1,47 @@
+* {
+  text-decoration: none;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  min-height: 800px;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container table {
+  border-collapse: collapse;
+  background-color: aqua;
+}
+
+.container table td {
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
+}
+
+.player {
+  background-color: brown;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+}
+/*# sourceMappingURL=style.css.map */

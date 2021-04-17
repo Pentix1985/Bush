@@ -1,0 +1,42 @@
+* {
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 800px;
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// .test-div {
+//     background-color: turquoise;
+//     width: 200px;
+//     height: 200px;
+// }
+
+.container table {
+    border-collapse: collapse;
+    background-color: aqua;
+}
+
+.container table td {
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+}
+
+.player {
+    background-color:brown;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+}
