@@ -4,20 +4,16 @@ let board = {
 
     field: "",
     /**
-     * Данный метода отрисовывает доску и положения игрока на ней
+     * Данный метода отрисовывает доску
      */
     renderBoard() {
         this.field = "<table class=\"board\">";
         // Цикл перебирает все строки, которые надо отобразить.
         for(let row = 0; row < boardFieldMaxSize.rows; row++) {
             this.field += "<tr>";
-
+            // Цикл перебирает все ячейки, которые надо отобразить.
             for(let col = 0; col < boardFieldMaxSize.cols; col++) {
-                if(player.y === row && player.x === col) {
-                    this.field += "<td class=\"player\"></td>";
-                } else {
-                    this.field += "<td></td>";
-                }
+                this.field += `<td data-y="${col}" data-x="${row}"></td>`;
             }
             this.field += "</tr>";
         }
@@ -25,9 +21,12 @@ let board = {
         container.insertAdjacentHTML("afterbegin", this.field);
     },
 
-    clearBoard() {
-        this.field ="";
-        const boardField = document.querySelector('.board');
-        boardField.remove();
-    }
+    /**
+     * Данный метод очищал доску, но за ненадобностью был исключен
+     */
+    // clearBoard() {
+    //     this.field ="";
+    //     const boardField = document.querySelector('.board');
+    //     boardField.remove();
+    // }
 }

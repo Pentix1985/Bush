@@ -1,9 +1,10 @@
 'use strict';
 
-const container = document.querySelector('.container');
-const btn = document.querySelector('.btn');
-const boardField = document.querySelector('.board');
+// Настройки
+let btn = document.querySelector('.btn');
+let container = document.querySelector('.container');
 
+// Размер поля
 const boardFieldMaxSize = {
     rows: 10,
     cols: 10,
