@@ -1,0 +1,13 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.post {
+  max-width: 800px;
+}
+
+.fa {
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
