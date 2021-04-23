@@ -1,6 +1,8 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -8,10 +10,25 @@
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
+  background-color: grey;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: minmax(auto, 1fr);
+      grid-template-rows: minmax(auto, 1fr);
+}
+
+.product {
+  text-align: center;
+  padding: 20px;
 }
 
 .product img {
   width: 200px;
   height: 200px;
+}
+
+.sort {
+  grid-column: span 4;
+  padding: 20px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -22,6 +22,8 @@ function reset() {
     products.forEach((product) => {
         product.style.display = "inline-block";
     });
+    from.value = "";
+    to.value = "";
 }
 
 /**
