@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: grid;
+    background-color: grey;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(auto, 1fr);
+    padding: 20px;
+}
+
+.product {
+    text-align: center;
+    padding: 20px;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+}
+
+// js-range-slider(start)
+.irs {
+    grid-area: 1 / 1 / 1/ 5;
+    font-size: 12px;
+    font-family: Arial,sans-serif;
+}
+
+.irs-handle {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    cursor: default;
+    z-index: 1;
+}
+
+.irs--flat .irs-handle>i:first-child {
+    display: none;
+}
+
+.irs--flat .irs-handle {
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0,0,0,0.3);
+    background-color: #cbcfd5;
+    background: linear-gradient(to bottom, white 0%, #B4B9BE 30%, white 100%);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2),inset 0 0 3px 1px white;
+    border-radius: 30px;
+}
+
+.irs--flat .irs-handle:hover {
+    border-color: rgba(0,0,0,0.45);
+    background-color: #939ba7;
+    background: linear-gradient(to bottom, white 0%, #919BA5 30%, white 100%);
+}
+
+.irs-bar {
+    top: 33px;
+    height: 12px;
+    background-color: #92bce0;
+    border: 1px solid #428bca;
+    background: linear-gradient(to bottom, #ffffff 0%, #428bca 30%, #b9d4ec 100%);
+    box-shadow: inset 0 0 1px 1px rgba(255,255,255,0.5);
+}
+// js-range-slider(end)
