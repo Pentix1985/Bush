@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 auto;
+    padding: 20px;
+    input {
+        max-width: 200px;
+    }
+    button {
+        display: inline-block;
+        max-width: 100px;
+    }
+}
+
+.message {
+    max-width: 600px;
+}
+
+.input-text {
+    margin-bottom: 20px;
+}
+
+hr {
+    border: none;
+    background-color: black;
+    height: 5px;
+    margin-bottom: 30px;
+}
+
+.text-warn {
+    visibility: hidden;
+}
+
+.author-warn {
+    visibility: hidden;
+}
