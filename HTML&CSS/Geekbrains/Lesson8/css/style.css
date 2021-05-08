@@ -807,8 +807,45 @@ body > div > div.products__top.details > a:nth-child(2) {
 
 .product {
     margin-top: 72px;
+    text-align: center;
 }
 
 .product-img {
-    max-width: 575px;
+    width: 570px;
+    height: 570px;
+}
+
+.product-img__selected-img {
+    width: 570px;
+    height: 570px;
+    position: relative;
+}
+
+.product-img__selected-img img {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+}
+
+/* #item3 {
+    opacity: 1;
+} */
+
+.product-img__selected-img img:target {
+    opacity: 1;
+}
+
+.item-details {
+    width: 70px;
+    height: 70px;
+    margin-top: 11px;
+    margin-right: 10px;
+}
+
+/* .item-details:hover {
+    opacity: 0.5;
+} */
+
+.product-img__item-3 {
+    margin-right: 0px;
 }
