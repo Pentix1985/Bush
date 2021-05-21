@@ -1,3 +1,59 @@
+@font-face {
+  font-family: 'Arial Narrow';
+  src: url("../fonts/arial_narrow.eot");
+  /* IE 9 Compatibility Mode */
+  src: url("../fonts/arial_narrow.eot?#iefix") format("embedded-opentype"), url("../fonts/arial_narrow.woff2") format("woff2"), url("../fonts/arial_narrow.woff") format("woff"), url("../fonts/arial_narrow.ttf") format("truetype"), url("../fonts/arial_narrow.svg#arial_narrow") format("svg");
+  /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Poppins Medium Italic';
+  src: url("../fonts/poppins_medium_italic.eot");
+  /* IE 9 Compatibility Mode */
+  src: url("../fonts/poppins_medium_italic.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins_medium_italic.woff2") format("woff2"), url("../fonts/poppins_medium_italic.woff") format("woff"), url("../fonts/poppins_medium_italic.ttf") format("truetype"), url("../fonts/poppins_medium_italic.svg#poppins_medium_italic") format("svg");
+  /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Poppins Medium';
+  src: url("../fonts/poppins_medium.eot");
+  /* IE 9 Compatibility Mode */
+  src: url("../fonts/poppins_medium.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins_medium.woff2") format("woff2"), url("../fonts/poppins_medium.woff") format("woff"), url("../fonts/poppins_medium.ttf") format("truetype"), url("../fonts/poppins_medium.svg#poppins_medium") format("svg");
+  /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Poppins SemiBold';
+  src: url("../fonts/poppins_semibold.eot");
+  /* IE 9 Compatibility Mode */
+  src: url("../fonts/poppins_semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins_semibold.woff2") format("woff2"), url("../fonts/poppins_semibold.woff") format("woff"), url("../fonts/poppins_semibold.ttf") format("truetype"), url("../fonts/poppins_semibold.svg#poppins_semibold") format("svg");
+  /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Roboto Condensed Bold';
+  src: url("../fonts/roboto_condensed_bold.eot");
+  /* IE 9 Compatibility Mode */
+  src: url("../fonts/roboto_condensed_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto_condensed_bold.woff2") format("woff2"), url("../fonts/roboto_condensed_bold.woff") format("woff"), url("../fonts/roboto_condensed_bold.ttf") format("truetype"), url("../fonts/roboto_condensed_bold.svg#roboto_condensed_bold") format("svg");
+  /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Roboto Condensed Light';
+  src: url("../fonts/roboto_condensed_light.eot");
+  /* IE 9 Compatibility Mode */
+  src: url("../fonts/roboto_condensed_light.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto_condensed_light.woff2") format("woff2"), url("../fonts/roboto_condensed_light.woff") format("woff"), url("../fonts/roboto_condensed_light.ttf") format("truetype"), url("../fonts/roboto_condensed_light.svg#roboto_condensed_light") format("svg");
+  /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url("../fonts/roboto_condensed.eot");
+  /* IE 9 Compatibility Mode */
+  src: url("../fonts/roboto_condensed.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto_condensed.woff2") format("woff2"), url("../fonts/roboto_condensed.woff") format("woff"), url("../fonts/roboto_condensed.ttf") format("truetype"), url("../fonts/roboto_condensed.svg#roboto_condensed") format("svg");
+  /* Chrome < 4, Legacy iOS */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,5 +61,101 @@
           box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+hr {
+  border: 0.5px solid white;
+}
+
+.top {
+  min-height: 725px;
+  background-image: url(../img/img-Main/Fon.jpg);
+  background-repeat: no-repeat;
+}
+
+header {
+  padding-top: 13px;
+}
+
+.top__header {
+  min-height: 83px;
+  opacity: 0.5;
+  background-color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px 0 0 0;
+}
+
+.top__header .logo {
+  display: inline-block;
+  line-height: 22px;
+}
+
+.top__header .logo h1 {
+  font-family: 'Poppins Medium';
+  font-size: 36px;
+  line-height: 22px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+
+.top__header .logo span {
+  font-family: 'Poppins Medium';
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 500;
+  letter-spacing: 2.0em;
+  color: #ffffff;
+}
+
+.top__header .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top__header .phone, .top__header .mail {
+  font-family: 'Roboto Condensed';
+  font-size: 16.7px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.top__header .phone {
+  margin-right: 39px;
+}
+
+.top__header .mail {
+  margin-right: 100px;
+}
+
+.lower__header {
+  padding-top: 32px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
