@@ -21,18 +21,18 @@ let game = {
         let field = document.querySelector('.field');
         let curPlayerBlock = document.querySelector('.cur-player');
 
-        field.addEventListener('mouseout', (evt) => {
-            curPlayerBlock.style.display = 'none';
-        });
+        // field.addEventListener('mouseout', (evt) => {
+        //     curPlayerBlock.style.display = 'none';
+        // });
 
-        field.addEventListener('mouseover', (evt) => {
-            curPlayerBlock.style.display = 'block';
-        });
+        // field.addEventListener('mouseover', (evt) => {
+        //     curPlayerBlock.style.display = 'block';
+        // });
 
-        field.addEventListener('mousemove', (evt) => {
-            curPlayerBlock.style.top = evt.clientY + 10 + 'px';
-            curPlayerBlock.style.left = evt.clientX + 10 + 'px';
-        });
+        // field.addEventListener('mousemove', (evt) => {
+        //     curPlayerBlock.style.top = evt.clientY + 10 + 'px';
+        //     curPlayerBlock.style.left = evt.clientX + 10 + 'px';
+        // });
 
 
         let squares = document.querySelectorAll('.square');
