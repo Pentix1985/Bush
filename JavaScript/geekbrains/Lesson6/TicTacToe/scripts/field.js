@@ -21,4 +21,15 @@ let field = {
         });
 
     },
+
+    isEmptySquares() {
+
+        let squares = document.querySelectorAll('.square');
+
+        squares.forEach((square) => {
+            if(square.innerHTML === '')
+            return true;
+        });
+        
+    }
 }

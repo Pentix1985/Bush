@@ -1,23 +1,27 @@
 'use strict';
 
 let game = {
+
+    сurrentPlayer: simbols.x,
+
     init() {
-        let condition = true;
+        let canPlay = true;
         field.renderField()
         let startBtn = document.querySelector('.start-btn');
         startBtn.addEventListener('click', (event) => {
-            if(condition) {
+            if(canPlay) {
                 game.run(event);
-                condition = false;
+                canPlay = false;
             } else {
                 field.resetField();
-                condition = true;
+                this.сurrentPlayer = simbols.x;
             }
+                
+                
         });
     },
 
     run(event) {
-        let сurrentPlayer = 'X';
         let field = document.querySelector('.field');
         let curPlayerBlock = document.querySelector('.cur-player');
 
@@ -34,13 +38,27 @@ let game = {
         //     curPlayerBlock.style.left = evt.clientX + 10 + 'px';
         // });
 
-
         let squares = document.querySelectorAll('.square');
         squares.forEach((square) => {
             square.addEventListener('click', (event) => {
                 if(square.innerHTML === '') {
-                    square.insertAdjacentHTML("afterbegin", `<p>${сurrentPlayer}</p>`);
+                    square.insertAdjacentHTML("afterbegin", `${this.сurrentPlayer}`);
+                    curPlayerBlock.innerHTML = '';
+                    
+                    // if(!field.isEmptySquares()) {
+                    //     alert(`Ничья!`);
+                    //     field.resetField();
+                    //     this.сurrentPlayer = simbols.x;
+                    // };
+                    
                 }
+                // player.isPlayerWin(this.сurrentPlayer);
+            if(this.сurrentPlayer === simbols.x) {
+                this.сurrentPlayer = simbols.o;
+            } else {
+                this.сurrentPlayer = simbols.x;
+            }
+            curPlayerBlock.insertAdjacentHTML("afterbegin", `${this.сurrentPlayer}`);
             });
         });
     }
