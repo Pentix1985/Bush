@@ -1,7 +1,9 @@
 'use strict';
 
 let field = {
-
+    /**
+     * Метод отрисовывает поле для игры
+     */
     renderField() {
         let field = document.querySelector('.field');
         
@@ -13,6 +15,9 @@ let field = {
         }
     },
 
+    /**
+     * Метод очищает поле от символов в ячейках и устанавливает первым игроком "Х"
+     */
     resetField() {
         let squares = document.querySelectorAll('.square');
 
@@ -20,16 +25,35 @@ let field = {
             square.innerHTML = '';
         });
 
+        game.сurrentPlayer = simbols.x;
+
     },
 
-    isEmptySquares() {
+    /**
+     * Метод добавляет обработчик события для кнопки "Начать игру"
+     * @param {Boolean} status статус возможности играть 
+     */
+    startBtnClicker(status) {
+        let startBtn = document.querySelector('.start-btn');
 
-        let squares = document.querySelectorAll('.square');
-
-        squares.forEach((square) => {
-            if(square.innerHTML === '')
-            return true;
+        startBtn.addEventListener('click', (event) => {
+            if(status) {
+                game.run(event);
+                game.status = false;
+            } else {
+                field.resetField();
+                game.status = true;
+            }
         });
+    },
+    // isEmptySquares() {
+
+    //     let squares = document.querySelectorAll('.square');
+
+    //     squares.forEach((square) => {
+    //         if(square.innerHTML === '')
+    //         return true;
+    //     });
         
-    }
+    // }
 }

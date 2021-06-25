@@ -3,27 +3,22 @@
 let game = {
 
     сurrentPlayer: simbols.x,
+    status: true,
 
+    /**
+     * Метод отрисовывает поле и добавляет обработчик события для кнопки "Начать игру"
+     */
     init() {
-        let canPlay = true;
-        field.renderField()
-        let startBtn = document.querySelector('.start-btn');
-        startBtn.addEventListener('click', (event) => {
-            if(canPlay) {
-                game.run(event);
-                canPlay = false;
-            } else {
-                field.resetField();
-                this.сurrentPlayer = simbols.x;
-            }
-                
-                
-        });
+        field.renderField();
+        field.startBtnClicker(this.status);       
     },
 
-    run(event) {
-        let field = document.querySelector('.field');
-        let curPlayerBlock = document.querySelector('.cur-player');
+    /**
+     * Метод в котором происходит игра
+     */
+    run() {
+        // let field = document.querySelector('.field');
+        // let curPlayerBlock = document.querySelector('.cur-player');
 
         // field.addEventListener('mouseout', (evt) => {
         //     curPlayerBlock.style.display = 'none';
@@ -40,28 +35,30 @@ let game = {
 
         let squares = document.querySelectorAll('.square');
         squares.forEach((square) => {
-            square.addEventListener('click', (event) => {
+            square.addEventListener('click', () => {
                 if(square.innerHTML === '') {
                     square.insertAdjacentHTML("afterbegin", `${this.сurrentPlayer}`);
-                    curPlayerBlock.innerHTML = '';
-                    
-                    // if(!field.isEmptySquares()) {
-                    //     alert(`Ничья!`);
-                    //     field.resetField();
-                    //     this.сurrentPlayer = simbols.x;
-                    // };
-                    
+                    // curPlayerBlock.insertAdjacentHTML("afterbegin", `${this.сurrentPlayer}`);
                 }
-                // player.isPlayerWin(this.сurrentPlayer);
-            if(this.сurrentPlayer === simbols.x) {
-                this.сurrentPlayer = simbols.o;
-            } else {
-                this.сurrentPlayer = simbols.x;
-            }
-            curPlayerBlock.insertAdjacentHTML("afterbegin", `${this.сurrentPlayer}`);
+    
+                if(player.isPlayerWin(this.сurrentPlayer)) {
+                    setTimeout(() => {
+                        alert(`Won!`);
+                        setTimeout(field.resetField(), 10);
+                    }, 10);
+                } else if(player.isDraw(this.сurrentPlayer)) {
+                    setTimeout(() => {
+                        alert(`Nichya!`);
+                        setTimeout(field.resetField(), 10);
+                    }, 10);
+                } else {
+                    player.switchPlayer();
+                }
+
             });
         });
-    }
+        // curPlayerBlock.insertAdjacentHTML("afterbegin", `${this.сurrentPlayer}`);        
+    },
 }
 
 game.init();
