@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1920px;
+  background-color: lightgrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider {
+  max-width: 800px;
+  position: relative;
+  min-height: 800px;
+}
+
+.slider img {
+  max-width: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+}
+
+.left-btn {
+  position: absolute;
+}
+
+.right-btn {
+  position: absolute;
+}
+/*# sourceMappingURL=style.css.map */
