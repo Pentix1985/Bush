@@ -26,34 +26,24 @@ let field = {
         });
 
         game.сurrentPlayer = simbols.x;
+        player.switchPlayerInBlock();
 
     },
 
     /**
      * Метод добавляет обработчик события для кнопки "Начать игру"
-     * @param {Boolean} status статус возможности играть 
+     * @param {Boolean} status статус определяет, началась игра в первый раз 
      */
-    startBtnClicker(status) {
+    startBtnClicker() {
         let startBtn = document.querySelector('.start-btn');
 
         startBtn.addEventListener('click', (event) => {
-            if(status) {
+            if(game.status) {
                 game.run(event);
                 game.status = false;
             } else {
                 field.resetField();
-                game.status = true;
             }
         });
     },
-    // isEmptySquares() {
-
-    //     let squares = document.querySelectorAll('.square');
-
-    //     squares.forEach((square) => {
-    //         if(square.innerHTML === '')
-    //         return true;
-    //     });
-        
-    // }
 }
