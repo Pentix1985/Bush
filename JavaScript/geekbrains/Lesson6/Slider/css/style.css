@@ -21,7 +21,7 @@
   width: 1200px;
   position: relative;
   min-height: 600px;
-  background-color: red;
+  background-color: #8a7676;
 }
 
 .slider img {
@@ -32,6 +32,11 @@
   left: 25%;
   top: 10%;
   z-index: 0;
+  display: block;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .left-btn {
@@ -55,5 +60,10 @@
   cursor: pointer;
   border-top: 3px solid black;
   border-left: 3px solid black;
+}
+
+.btn:hover {
+  border-top-color: red;
+  border-left-color: red;
 }
 /*# sourceMappingURL=style.css.map */
