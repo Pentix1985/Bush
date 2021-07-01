@@ -14,17 +14,29 @@
 
 .slider {
     width: 1200px;
-    position: relative;
+    margin: 0 auto;
     min-height: 600px;
     background-color: rgb(138, 118, 118);
-    img {
-        max-width: 600px;
-        object-fit: cover;
-        position: absolute;
-        left: 25%;
-        top: 10%;
-        z-index: 0;
-        display: block;
+    display: flex;
+    padding-top: 50px;
+    align-items: center;
+    justify-content: center;
+    .slider__img-wrapper {
+        width: 600px;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+        order: 1;
+        img {
+            width: 600px;
+            height: 400px;
+            object-fit: cover;
+            position: absolute;
+            left: 0px;
+            z-index: 1;
+            display: inline-block;
+            transition: left 0.5s;
+        }
     }
 }
 
@@ -33,24 +45,25 @@
 }
 
 .left-btn {
-    top: 35%;
     left: 20%;
     transform: rotate(-45deg);
+    order: 0;
 }
 
 .right-btn {
-    top: 35%;
     right: 20%;
     transform: rotate(135deg);
+    order: 2;
 }
 
 .btn {
-    position: absolute;
     width: 20px;
     height: 20px;
+    top: 45%;
     cursor: pointer;
     border-top: 3px solid black;
     border-left: 3px solid black;
+    cursor: pointer;
     &:hover {
         border-top-color: red;
         border-left-color: red;

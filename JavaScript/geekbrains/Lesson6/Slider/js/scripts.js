@@ -13,29 +13,54 @@ let img = {
         this.images[this.currentImg].classList.remove('hidden');
     },
 
+    clearStyle() {
+        this.images[this.currentImg].removeAttribute('style');
+    },
+
     clickToLeft() {
-        this.images[this.currentImg].classList.add('hidden');
+        this.images[this.currentImg].style.left = '600px';
+        setTimeout(this.clearStyle.bind(img), 0);
+        
         if(this.currentImg === 0) {
             this.currentImg = this.images.length - 1;
-        } else {
+            this.images[this.currentImg].style.transition = 'none';
+            this.images[this.currentImg].style.left = '-600px';
+            this.showImg();
+            setTimeout(this.clearStyle.bind(img), 0);
+
+            } else {
             this.currentImg--;
+            this.images[this.currentImg].style.transition = 'none';
+            this.images[this.currentImg].style.left = '-600px';
+            this.showImg();
+            setTimeout(this.clearStyle.bind(img), 0);
         }
-        this.showImg();
     },
 
     clickToRight() {
-        this.images[this.currentImg].classList.add('hidden');
+        this.images[this.currentImg].style.left = '-600px';
+        setTimeout(this.clearStyle.bind(img), 0);
+
         if(this.currentImg === this.images.length - 1) {
             this.currentImg = 0;
-        } else {
+            this.images[this.currentImg].style.transition = 'none';
+            this.images[this.currentImg].style.left = '600px';
+            this.showImg();
+            setTimeout(this.clearStyle.bind(img), 0);
+
+            } else {
             this.currentImg++;
+            this.images[this.currentImg].style.transition = 'none';
+            this.images[this.currentImg].style.left = '600px';
+            this.showImg();
+            setTimeout(this.clearStyle.bind(img), 0);
         }
-        this.showImg();
+        
     },    
 }
 
 let leftBtn = document.querySelector('.left-btn');
-    leftBtn.addEventListener('click', (ev) => {
+    leftBtn.addEventListener('click', (event) => {
         img.clickToLeft();
     });
 
