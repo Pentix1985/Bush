@@ -13,13 +13,35 @@
     <div class="container">
         <header>
             <button class="cart">Корзина<i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
+            <div class="basket basket-visibile">
+                <div class="basket__total-price">Итого:<span class="basket__total-price-number"></span></div>
+                <h2 class="basket__advertisement">Нет товаров в корзине.</h2>
+            </div>
         </header>
-        <section class="products">
-            <div class="product"></div>
-            <div class="product"></div>
-            <div class="product"></div>
-            <div class="product"></div>
-        </section>
+        <main>
+            <section class="products">
+                
+            </section>
+        </main>
     </div>
+
+    <!-- Templates -->
+    <template id="itemCard">
+        <div class="basket__item">
+            <p class="basket__product-name"></p>
+            <p class="basket__product-price">Цена: р.</p>
+            <div class="basket__product-count">
+                <button class="basket__plus-btn basket-btn">+</button>
+                <p class="basket__count">Количество: <span class="basket__count-number"></span></p>
+                <button class="basket__minus-btn basket-btn">-</button>
+            </div>
+            <button class="basket__remove-btn">Удалить товар</button>    
+        </div>
+    </template>
+    <!-- EndTemplates -->
+
+    <script src="scripts/displayitems.js"></script>
+    <script src="scripts/itembasket.js"></script>
+    <script src="scripts/scipts.js"></script>
 </body>
 </html>
