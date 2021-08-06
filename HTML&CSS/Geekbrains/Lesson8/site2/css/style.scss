@@ -11,7 +11,7 @@
 }
 
 @font-face {
-	font-family: 'Poppins Medium Italic';
+	font-family: 'Poppins Medium 500 Italic';
 	src: url('../fonts/poppins_medium_italic.eot'); /* IE 9 Compatibility Mode */
 	src: url('../fonts/poppins_medium_italic.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
 		url('../fonts/poppins_medium_italic.woff2') format('woff2'), /* Super Modern Browsers */
@@ -21,7 +21,7 @@
 }
 
 @font-face {
-	font-family: 'Poppins Medium';
+	font-family: 'Poppins Medium 500';
 	src: url('../fonts/poppins_medium.eot'); /* IE 9 Compatibility Mode */
 	src: url('../fonts/poppins_medium.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
 		url('../fonts/poppins_medium.woff2') format('woff2'), /* Super Modern Browsers */
@@ -31,7 +31,7 @@
 }
 
 @font-face {
-	font-family: 'Poppins SemiBold';
+	font-family: 'Poppins SemiBold 700';
 	src: url('../fonts/poppins_semibold.eot'); /* IE 9 Compatibility Mode */
 	src: url('../fonts/poppins_semibold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
 		url('../fonts/poppins_semibold.woff2') format('woff2'), /* Super Modern Browsers */
@@ -79,9 +79,9 @@ $RC: 'Roboto Condensed';
 $RCLight: 'Roboto Condensed Light';
 $RCBold: 'Roboto Condensed Bold';
 $AN: 'Arial Narrow';
-$PMediumItalic: 'Poppins Medium Italic';
-$PMedium:'Poppins Medium';
-$PSemiBold: 'Poppins SemiBold';
+$PMedium500Italic: 'Poppins Medium 500 Italic';
+$PMedium500:'Poppins Medium 500';
+$PSemiBold700: 'Poppins SemiBold 700';
 
 .container {
     max-width: 1920px;
@@ -122,18 +122,16 @@ header {
         margin-top: 5px;
         margin-right: 128px;
         h1 {
-            font-family: $PMedium;
+            font-family: $PMedium500;
             font-size: 36px;
             line-height: 22px;
-            font-weight: 500;
             letter-spacing: 0.01em;
             color: #ffffff;
             margin-bottom: 5px;
         }
         span {
-            font-family: $PMedium;
+            font-family: $PMedium500;
             font-size: 15px;
-            font-weight: 500;
             letter-spacing: 2.0em;
             color: #ffffff;
             margin-left: 2px;
@@ -146,7 +144,6 @@ header {
             font-family: $RC;
             font-size: 16.7px;
             line-height: 22px;
-            font-weight: 400;
             letter-spacing: 0.01em;
             color: #ffffff;
             display: flex;
@@ -177,7 +174,6 @@ header {
                 font-family: $RC;
                 font-size: 16.7px;
                 line-height: 22px;
-                font-weight: 400;
                 letter-spacing: 0.01em;
                 color: #ffffff;
             }
@@ -250,7 +246,7 @@ header {
         }
     }
     .top__big-title {
-        font-family: $PMedium;
+        font-family: $PMedium500;
         font-size: 60px;
         line-height: 48px;
         font-weight: 500;
@@ -296,7 +292,7 @@ header {
     .about-us__info {
         padding-top: 10px;
         .about-us__title {
-            font-family: $PMedium;
+            font-family: $PMedium500;
             font-size: 36px;
             line-height: 36px;
             font-weight: 500;
@@ -324,7 +320,7 @@ header {
     .services__title {
         text-align: center;
         width: 100%;
-        font-family: $PMedium;
+        font-family: $PMedium500;
         font-size: 36px;
         line-height: 48px;
         color: $orangeColor;
@@ -368,7 +364,7 @@ header {
         .services__textblock {
             padding-top: 4px;
             .services__subtitle {
-                font-family: $PMedium;
+                font-family: $PMedium500;
                 font-size: 16px;
                 line-height: 24px;
                 letter-spacing: 0.01em;
@@ -400,7 +396,7 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     .gallery__title {
-        font-family: $PMedium;
+        font-family: $PMedium500;
         font-size: 36px;
         line-height: 48px;
         color: $orangeColor;
@@ -424,7 +420,7 @@ header {
         }
         .gallery__game-title {
             padding: 19px 51px 0;
-            font-family: $PMedium;
+            font-family: $PMedium500;
             font-size: 14px;
             line-height: 23px;
             letter-spacing: 0.01em;
@@ -439,11 +435,135 @@ header {
             width: 130px;
             height: 30px;
             background-color: #f44336;
-            font-family: $PMedium;
+            font-family: $PMedium500;
             font-size: 14.1px;
             line-height: 24px;
             letter-spacing: 0.01em;
             color: #ffffff;
+        }
+    }
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../img/img-Main/layers_testimonial.png');
+    background-repeat: no-repeat;
+    padding: 78px 375px 98px;
+    .testimonial__title {
+        width: 100%;
+        text-align: center;
+        font-family: $PMedium500;
+        font-size: 48px;
+        line-height: 48px;
+        color: #ffffff;
+        margin-bottom: 83px;
+    }
+    img {
+        width: 45px;
+        height: 38px;
+        margin-bottom: 50px;
+    }
+    .slider {
+        display: flex;
+        .slider__btn {
+            width: 37px;
+            height: 37px;
+            border: 1px solid #ffffff;
+            flex: 0 0 37px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            .slider__arrow {
+                width: 11px;
+                height: 11px;
+            }
+        }
+        .slider__left-btn {
+            margin-right: 80px;
+            .left-arrow{
+                border-left: 1px solid #ffffff;
+                border-bottom: 1px solid #ffffff;
+                transform: rotate(45deg);
+                margin-left: 5px;
+            }
+        }
+        .slider__right-btn {
+            margin-left: 80px;
+            .right-arrow {
+                border-right: 1px solid #ffffff;
+                border-bottom: 1px solid #ffffff;
+                transform: rotate(-45deg);
+                margin-right: 5px;
+            }  
+        }
+        .slider__container {
+            text-align: center;
+            .slider__text {
+                font-family: $RCLight;
+                font-size: 14px;
+                line-height: 24px;
+                color: #ffffff;
+                margin-bottom: 20px;
+            }
+            .slider__author {
+                font-family: $RCLight;
+                text-transform: uppercase;
+                font-size: 16px;
+                line-height: 1.2;
+                color: #ffffff;
+                .slider__author-name {
+                    font-family: $RCBold;
+                    font-size: 16px;
+                    line-height: 1.2;
+                }
+            }
+        }  
+    }
+}
+
+.newsandevents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    padding: 97px 375px 96px 389px;
+    .newsandevents__arrows {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .newsandevents__title {
+        width: 100%;
+        font-family: $PMedium500;
+        font-size: 36px;
+        line-height: 48px;
+        color: #f44336;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    .newsandevents__news {
+        li {
+            display: flex;
+        }
+        .newsandevents__subtitle {
+            font-family: $PMedium500;
+            font-size: 24px;
+            line-height: 48px;
+            color: #000000;
+        }
+        .newsandevents__news-date {
+            width: 98px;
+            height: 139px;
+            border: 1px solid #e8e8e8;
+            border-radius: 49px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
