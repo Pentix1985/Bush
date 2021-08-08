@@ -75,6 +75,8 @@ body {
     right: 0;
     top: 40px;
     padding: 0 10px;
+    max-height: 200px;
+    overflow: scroll;
 }
 
 .basket-display {
@@ -97,6 +99,14 @@ body {
 .basket__total {
     width: 100%;
     text-align: right;
+}
+
+.basket__product {
+    display: grid;
+    width: 100%;
+    gap: 10px;
+    grid-template-columns: 20% 25% 25% 25%;
+    border-bottom: 1px solid grey;
 }
 
 body > div.header > div > div.rightHeader > span > span {
