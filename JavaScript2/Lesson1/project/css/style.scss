@@ -1,0 +1,48 @@
+@import url('../css/mynullcss.css');
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px 20px 20px;
+    border-bottom: 1px solid grey;
+    .header__btn-cart {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: #0B61A4;
+        color: #FFA573;;
+    }
+    .header__shop-title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: #FF0000;
+    }
+}
+
+.main {
+    padding: 50px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .products__product-item {
+        border: 1px solid grey;
+        background-color: wheat;
+        padding: 10px;
+        border-radius: 10px;
+        .products__product-name {
+            color: #1B0773;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #1B0773;
+        }
+        .products__product-price {
+
+        }
+        .products__buy-btn {
+            
+        }
+    }
+}
