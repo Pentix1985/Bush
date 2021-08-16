@@ -1,0 +1,35 @@
+@import url('../css/mynullcss.css');
+html, body {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1170px;
+    background-color: bisque;
+    padding: 20px;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    fieldset {
+        border: 1px solid black;
+        margin-bottom: 20px;
+        padding: 20px;
+        legend {
+            text-align: center;
+        }
+    }
+}
+
+.total {
+    margin-left: 50px;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    border: 2px solid black;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Burgers</title>
+</head>
+<body>
+
+    
+    <!-- ### Маленький (50 рублей, 20 калорий).
+    ### Большой (100 рублей, 40 калорий). ### Гамбургер может быть с одним из нескольких видов начинок (обязательно):
+    ### С сыром (+10 рублей, +20 калорий).
+    ### С салатом (+20 рублей, +5 калорий).
+    ### С картофелем (+15 рублей, +10 калорий). ### Дополнительно гамбургер можно посыпать приправой (+15 рублей, +0 калорий) и полить майонезом (+20 рублей, +5 калорий). ### 3Напишите программу, рассчитывающую стоимость и калорийность гамбургера. Можно использовать примерную архитектуру класса из методички, но можно использовать и свою. -->
+    <div class="container">
+        <form action="#">
+            <fieldset>
+                <legend>Выбирите бургер</legend>
+                    <p><input name="burger" type="radio" value="smallburger"> Маленький бургер (50 рублей, 20 калорий)</p>
+                    <p><input name="burger" type="radio" value="bigburger" checked> Большой бургер (100 рублей, 40 калорий)</p>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Выбирите начинку бургера</legend>
+                <p><input name="burgerFilling" type="checkbox" value="chees"> С сыром (+10 рублей, +20 калорий)</p>
+                <p><input name="burgerFilling" type="checkbox" value="salat"> С салатом (+20 рублей, +5 калорий)</p>
+                <p><input name="burgerFilling" type="checkbox" value="potato"> С картофелем (+15 рублей, +10 калорий)</p>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Выбирите дополнительный ингридиенты</legend>
+                <p><input name="burgerAdditionally" type="checkbox" value="seasoning"> Посыпать приправой (+15 рублей, +0 калорий)</p>
+                <p><input name="burgerAdditionally" type="checkbox" value="mayonnaise"> Полить майонезом (+20 рублей, +5 калорий)</p>
+            </fieldset>
+            <p><input type="submit" value="Выбрать"><span class="total"></span></p>
+            
+        </form>
+        <script src="js/buegers.js"></script>
+    </div>
+</body>
+</html>
