@@ -16,6 +16,12 @@ form {
         legend {
             margin-left: 20px;
         }
+        p {
+            min-height: 14px;
+        }
+        input {
+            border: 1px solid transparent;
+        }
     }
     .btn {
         display: inline-block;

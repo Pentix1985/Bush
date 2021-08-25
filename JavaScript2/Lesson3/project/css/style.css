@@ -81,7 +81,7 @@ img {
 .cart {
     padding: 15px;
     width: 300px;
-    min-height: 465px;
+    min-height: 300px;
     position: absolute;
     background: white;
     right: 15px;
@@ -90,7 +90,6 @@ img {
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .cart p, .color span {
@@ -128,20 +127,19 @@ img {
     cursor: pointer;
 }
 
-.cart-item__add-reduce-check {
-    border-top: 1px solid black;
-    padding: 10px;
+.product-bio__reduce-increaze {
+    padding: 5px;
+    border: 1px solid black;
     display: flex;
-    align-self: center;
+    justify-content: space-between;
+    border-radius: 10px;
 }
 
-.cart-item__add-reduce-check button {
+.product-bio__reduce-increaze input {
+    width: 20px;
+}
+
+.product-bio__reduce-increaze button {
     cursor: pointer;
 }
-
-.cart-item__check {
-    width: 30px;
-    text-align: center;
-}
-
 

@@ -25,6 +25,14 @@ form fieldset legend {
   margin-left: 20px;
 }
 
+form fieldset p {
+  min-height: 14px;
+}
+
+form fieldset input {
+  border: 1px solid transparent;
+}
+
 form .btn {
   display: inline-block;
   width: 50px;

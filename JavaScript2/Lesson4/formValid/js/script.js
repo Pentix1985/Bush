@@ -2,20 +2,30 @@
 
 function checkForCorrect() {
     // a. Имя содержит только буквы.
-    // let name = formInputs.inputName.value;
-    // console.log(/^[a-zа-яё]{2,}$/igu.test(name));
+    let r = true;
+    if(!(/^[a-zа-яё]{2,}$/igu.test(formInputs.inputName.value))) {
+        formInputs.inputName.style.borderColor = 'red';
+        formInputs.inputName.nextSibling.nextSibling.innerText = 'Введено некорректное имя!';
+        r = false;
+    }
 
     // +7(000)000-0000.
-    // let phone = formInputs.inputPhone.value;
-    // console.log(/^\+[\d]{1}[\(]{1}[\d]{3}[\)]{1}[\d]{3}[\-]{1}[\d]{4}$/igu.test(phone));
-
-    // c. E-mail имеет вид mymail@mail.ru, или my.mail@mail.ru, или my-mail@mail.ru.
-    let email = formInputs.inputEmail.value;
-    console.log(/^[a-z]+/igu.test(email));
+    if(!(/^\+[\d]{1}[\(]{1}[\d]{3}[\)]{1}[\d]{3}[\-]{1}[\d]{4}$/igu.test(formInputs.inputPhone.value))) {
+        formInputs.inputPhone.style.borderColor = 'red';
+        formInputs.inputPhone.nextSibling.nextSibling.innerText = 'Введен некорректный телефон!';
+        r = false;
+    }
+    
+    if(!(/^[a-z]+\.|-|[a-z]+@[a-z]+\.[a-z]{2,5}$/igu.test(formInputs.inputEmail.value))
+    ) {
+        formInputs.inputEmail.style.borderColor = 'red';
+        formInputs.inputEmail.nextSibling.nextSibling.innerText = 'Введен некорректный email!';
+        r = false;
+    }
 
     // d. Текст произвольный.
-    // let textArea = formInputs.textArea.value;
-    // console.log(/^[a-zа-яё]{2,}$/igu.test(textArea));
+    console.log(/./igu.test(formInputs.textArea.value));
+    return r;
 }
 
 let formInputs = {
@@ -29,5 +39,5 @@ let formInputs = {
 formInputs.btn.addEventListener('click', (event) => {
     if(checkForCorrect()) {
         console.log('Данные из формы прошли проверку!');
-    };
+    }
 });
