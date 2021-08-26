@@ -87,11 +87,11 @@ class CartItem extends ListItem {
     }
 
     render() {
-        return `<div class="cart-item" data-id="${this.id_product}">
+        return `<div class="cart-item" data-id="${this.id}">
             <div class="product-bio">
                 <img src="${this.img}" alt="Some image">
                 <div class="product-desc">
-                    <p class="product-title">${this.product_name}</p>
+                    <p class="product-title">${this.title}</p>
                     <p class="product-quantity">Quantity: ${this.quantity}</p>
                     <p class="product-single-price">$${this.price} each</p>
                 </div>

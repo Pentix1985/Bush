@@ -60,14 +60,14 @@ class ListItem {
     }
 
     render() {
-        return `<div class="product-item" data-id="${this.id_product}">
+        return `<div class="product-item" data-id="${this.id}">
                 <img src="${this.img}" alt="Some img">
                 <div class="desc">
-                    <h3>${this.product_name}</h3>
+                    <h3>${this.title}</h3>
                     <p>${this.price} $</p>
                     <button class="buy-btn"
-                    data-id="${this.id_product}"
-                    data-name="${this.product_name}"
+                    data-id="${this.id}"
+                    data-name="${this.title}"
                     data-price="${this.price}">Купить</button>
                 </div>
             </div>`
