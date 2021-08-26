@@ -1,0 +1,100 @@
+<div id="app">
+   
+   <div class="products">
+       <div v-for="product of products" :key="product.title">
+           <img :src="product.img" alt="">
+           <p>{{ product.title }}</p>
+           <p>{{ product.quantity }}</p>
+           <p>{{ product.quantity * product.price}}</p>
+       </div>
+   </div>
+   <button @click="addProduct()">Добавить товар</button>
+   
+    <h2>{{ name }}</h2>
+    <h3>{{ sayHello() }}</h3>
+    <a :href="link">Google</a>
+    
+<!--    <button v-on:click="counter++">Increase</button>-->
+       <button @click="counter++">Increase</button>
+       <button @click="increase(3,$event)">Increase in method</button>
+    
+    <p>{{ counter }}</p>
+    <p>{{ counter > 10 ? "больше 10" : "Меньше 10" }}</p>
+    
+    <h2 v-if="show">I'm visible</h2>
+    <h2 v-else="show">I'm not visible</h2>
+    <button @click="show=!show">OK</button>
+    
+    <p @mousemove="getCoordinates()">Some long long text {{ x }} / {{ y }}
+        <span @mousemove.stop>NO MOVE!!!</span>
+    </p>
+    
+    <input type="text" v-model.lazy="name">
+    
+    <div v-html="completeEl"></div>
+    
+</div>
+<script src="vue.js"></script>
+
+<script>
+    const app = new Vue(
+        {
+            el: "#app",
+            data:{
+                name: "Igor",
+                title: "test",
+                link:"https://google.com",
+                counter: 0,
+                show:true,
+                x:0,
+                y:0,
+                completeEl: "<a href='https://yandex.ru'>link</a>",
+                products:[
+                    {
+                        img: 'https://placehold.it/200x150',
+                        title: 'laptop',
+                        price: 30000,
+                        quantity: 1
+                    },
+                    {
+                        img: 'https://placehold.it/200x150',
+                        title: 'keyboard',
+                        price: 1000,
+                        quantity: 1
+                    },
+                    {
+                        img: 'https://placehold.it/200x150',
+                        title: 'mouse',
+                        price: 2000,
+                        quantity: 1
+                    }
+                ]
+                
+            },
+            methods:{
+                sayHello(){
+//                  this.title = 123;
+                    return this.title;
+                },
+                increase(step,e){
+                    this.counter+=step;
+                    console.log(e);
+                },
+                getCoordinates(){
+                    this.x = event.clientX;
+                    this.y = event.clientY;
+                },
+                addProduct(){
+                    this.products.push(
+                        {
+                            img: 'https://placehold.it/200x150',
+                            title: 'PC',
+                            price: 40000,
+                            quantity: 2
+                        }
+                    )
+                }
+            }
+        }
+    );
+</script>

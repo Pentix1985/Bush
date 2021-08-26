@@ -42,4 +42,17 @@ form .btn {
 form textarea {
   resize: none;
 }
+
+form .error-msg {
+  color: red;
+  margin: 10px 0;
+}
+
+form .invalid {
+  border: 2px solid red;
+}
+
+form .valid {
+  border: 2px solid green;
+}
 /*# sourceMappingURL=style.css.map */
