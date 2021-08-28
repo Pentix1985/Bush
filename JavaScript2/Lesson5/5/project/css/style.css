@@ -121,6 +121,7 @@ img {
 }
 .product-bio{
     display: flex;
+    flex-direction: column;
 }
 .cart-item img{
     align-self: flex-start;
@@ -151,6 +152,7 @@ img {
     position: absolute;
     bottom: 5px;
     right: 0;
+    cursor: pointer;
 }
 .search-form{
     position: relative;
@@ -168,4 +170,20 @@ img {
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #fafafa;
+}
+
+.product-bio__reduce-increaze {
+    padding: 5px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.product-bio__reduce-increaze input {
+    width: 20px;
+}
+
+.product-bio__reduce-increaze button {
+    cursor: pointer;
 }

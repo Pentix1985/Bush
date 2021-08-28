@@ -11,19 +11,52 @@
     <header>
         <div class="logo">E-shop</div>
         <div class="cart">
-            <form action="#" class="search-form">
-                <input type="text" class="search-field">
+            <form action="#" class="search-form" @submit.prevent="filterGoods(searchLine)">
+                <input type="text" class="search-field" v-model="searchLine">
                 <button class="btn-search" type="submit">
                     <i class="fas fa-search"></i>
                 </button>
             </form>
-            <button class="btn-cart" type="button">Корзина</button>
-            <div class="cart-block invisible"></div>
+            <button @click="isVisibleCart = !isVisibleCart" class="btn-cart" type="button">Корзина</button>
+            <div v-if="isVisibleCart" class="cart-block">
+                <span v-if="productsInCart.length === 0" class="no-items-in-cart-msg">Корзина пустая</span>
+                <div v-for="product of productsInCart" :key="product.id_product" class="products-container">
+                    <div class="cart-item" :data-id="product.id_product">
+                        <div class="product-bio">
+                            <img :src="imgCatalog" alt="Some image">
+                            <div class="product-desc">
+                                <p class="product-title">{{product.product_name}}</p>
+                                <p class="product-quantity">Quantity: {{product.quantity}}</p>
+                                <p class="product-single-price">${{product.price}} each</p>
+                            </div>
+                            <div class="product-bio__reduce-increaze">
+                                <button @click="addProduct(product)" class="product-bio__increaze">+</button>
+                                <input class="product-bio__input" :value="product.quantity">
+                                <button @click="removeProduct(product)" class="product-bio__reduce">-</button>
+                            </div>
+                        </div>
+                        <div class="right-block">
+                            <p class="product-price">${{product.quantity*product.price}}</p>
+                            <button class="del-btn" data-id="${product.id_product}" @click="deleteProductFromCart(product)">&times;</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+                <!-- <div v-for="product of productsInCart" :key="product.title">
+                    <img :src="product.img" alt="">
+                    <p>{{ product.title }}</p>
+                    <p>{{ product.quantity }}</p>
+                    <p>{{ product.quantity * product.price}}</p>
+                </div> -->
+            </div>
         </div>
     </header>
     <main>
-        <div class="products">
-            <div class="product-item" v-for="product of products" :key="product.id_product">
+        <h3 v-if="noItems">Нет данных.</h3>
+        <div v-else="noItems" class="products">
+            <div class="product-item" v-for="product of filtered" :key="product.id_product">
                 <img :src="imgCatalog" alt="Some img">
                 <div class="desc">
                     <h3>{{product.product_name}}</h3>
@@ -39,18 +72,3 @@
     <script src="js/main.js"></script>
 </body>
 </html>
-
-<!--<div class="cart-item" data-id="${this.id_product}">-->
-    <!--<div class="product-bio">-->
-        <!--<img src="${this.img}" alt="Some image">-->
-        <!--<div class="product-desc">-->
-            <!--<p class="product-title">${this.product_name}</p>-->
-            <!--<p class="product-quantity">Quantity: ${this.quantity}</p>-->
-            <!--<p class="product-single-price">$${this.price} each</p>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="right-block">-->
-        <!--<p class="product-price">${this.quantity*this.price}</p>-->
-        <!--<button class="del-btn" data-id="${this.id_product}">&times;</button>-->
-    <!--</div>-->
-<!--</div>-->

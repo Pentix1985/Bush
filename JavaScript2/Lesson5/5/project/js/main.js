@@ -5,7 +5,13 @@ const app = new Vue({
     data: {
         catalogUrl: '/catalogData.json',
         products: [],
-        imgCatalog: 'https://placehold.it/200x150'
+        filtered: [],
+        imgCatalog: 'https://placehold.it/200x150',
+        noItems: true,
+        productsInCart: [],
+        isVisibleCart: false,
+        searchLine: '',
+        quantity: 0,
     },
     methods: {
         getJson(url){
@@ -15,8 +21,54 @@ const app = new Vue({
                     console.log(error);
                 })
         },
+
         addProduct(product){
-            console.log(product.id_product);
+            let productId = product.id_product;
+            let find = this.productsInCart.find((item) => {
+                return item.id_product === productId;
+            });
+
+            if(find) {
+                find.quantity++;
+            } else {
+                let newProd = Object.assign({quantity: 1}, product)
+                this.productsInCart.push(newProd);
+            }
+        },
+
+        removeProduct(product) {
+            let productId = product.id_product;
+            let find = this.productsInCart.find((item) => {
+                return item.id_product === productId;
+            });
+
+            if(find.quantity > 1) {
+                find.quantity--;
+            } else {
+                this.productsInCart.splice(this.productsInCart.indexOf(find), 1);
+            }
+        },
+
+        deleteProductFromCart(product) {
+            let productId = product.id_product;
+            let find = this.productsInCart.find((item) => {
+                return item.id_product === productId;
+            });
+            this.productsInCart.splice(this.productsInCart.indexOf(find), 1);
+        },
+
+        filterGoods(searchLine) {
+            const regexp = new RegExp(searchLine, 'i');
+
+            this.filtered = this.products.filter(product => regexp.test(product.product_name));
+            // this.products.forEach(el => {
+            //     const block = document.querySelector(`.product-item[data-id="${el.id_product}"]`);
+            //     if(!this.filtered.includes(el)){
+            //         block.classList.add('invisible');
+            //     } else {
+            //         block.classList.remove('invisible');
+            //     }
+            // })
         }
     },
     mounted(){
@@ -24,14 +76,18 @@ const app = new Vue({
            .then(data => {
                for(let el of data){
                    this.products.push(el);
+                   this.filtered.push(el);
                }
+               this.noItems = false;
            });
-        this.getJson(`getProducts.json`)
-            .then(data => {
-                for(let el of data){
-                    this.products.push(el);
-                }
-            })
+
+        // this.getJson(`getProducts.json`)
+        //     .then(data => {
+        //         for(let el of data){
+        //             this.products.push(el);
+        //         }
+        //         this.noItems = false;
+        //     })
     }
 })
 
@@ -69,16 +125,16 @@ const app = new Vue({
 //         }
 //     }
 //     filter(value){
-//         const regexp = new RegExp(value, 'i');
-//         this.filtered = this.allProducts.filter(product => regexp.test(product.product_name));
-//         this.allProducts.forEach(el => {
-//             const block = document.querySelector(`.product-item[data-id="${el.id_product}"]`);
-//             if(!this.filtered.includes(el)){
-//                 block.classList.add('invisible');
-//             } else {
-//                 block.classList.remove('invisible');
-//             }
-//         })
+        // const regexp = new RegExp(value, 'i');
+        // this.filtered = this.allProducts.filter(product => regexp.test(product.product_name));
+        // this.allProducts.forEach(el => {
+        //     const block = document.querySelector(`.product-item[data-id="${el.id_product}"]`);
+        //     if(!this.filtered.includes(el)){
+        //         block.classList.add('invisible');
+        //     } else {
+        //         block.classList.remove('invisible');
+        //     }
+        // })
 //     }
 //     _init(){
 //         return false
