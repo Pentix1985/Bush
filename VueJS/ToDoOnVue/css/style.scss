@@ -1,0 +1,96 @@
+@import url(../css/mynullcss.css);
+
+#container {
+    max-width: 1920px;
+    background-color: blanchedalmond;
+    // height: 100%;
+    margin: 0 auto;
+    padding: 40px 80px 80px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.todo {
+    display: flex;
+    input {
+        background-color: beige;
+        height: 25px;
+        width: 200px;
+        margin-top: 5px;
+        padding: 5px;
+    }
+    textarea {
+        background-color: beige;
+        height: 150px;
+        width: 200px;
+        margin-top: 5px;
+    }
+    legend {
+        font-family: sans-serif;
+        color: gray;
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    fieldset {
+        margin-top: 15px;
+    }
+    .todo-list {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        background-color: blanchedalmond;
+        margin-right: 20px;
+        span {
+            background-color: blanchedalmond;
+            width: 100%;
+            display: inline-block;
+            font-size: 20px;
+            font-family: sans-serif;
+            padding-bottom: 10px;
+        }
+        p {
+            padding-top: 20px;
+            font-family: sans-serif;
+            color: gray;
+        }
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        max-height: 380px;
+        background-color: white;
+        padding-bottom: 20px;
+        span {
+            background-color: blanchedalmond;
+            width: 100%;
+            display: inline-block;
+            font-size: 20px;
+            font-family: sans-serif;
+            padding-bottom: 10px;
+        }
+        textarea {
+            resize: none;
+            padding: 5px;
+        }
+        button {
+            margin-left: 0.75em;
+            width: 115px;
+            display: inline-block;
+            font-size: 12px;
+            padding: 15px;
+            font-family: sans-serif;
+            background-color: blueviolet;
+            color: white;
+            margin-top: 10px;
+        }
+        p {
+            font-family: sans-serif;
+            color: gray;
+            font-size: 10px;
+            margin-left: 0.75em;
+        }
+    }
+}
+
